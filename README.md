@@ -1,4 +1,4 @@
-<h1>Hi, I'm Mehboob! <br/><a href="https://github.com/zeb0x01">Programmer</a>, <a href="https://www.linkedin.com/in/mehboob-shaikh-7791a3169/">Cybersecurity Professional</a>, <a href="https://hackerone.com/zeb0x01">Hackerone Profile</a></h1>
+<h1>Hi, I'm Mehboob! <br/><a href="https://hackerone.com/zeb0x01">Hackerone Profile</a>, <a href="https://github.com/zeb0x01">Programmer</a>, <a href="https://www.linkedin.com/in/mehboob-shaikh-7791a3169/">Cybersecurity Professional</a>, </h1>
 
 <h2>👨‍💻 Software Development Projects:</h2>
 
