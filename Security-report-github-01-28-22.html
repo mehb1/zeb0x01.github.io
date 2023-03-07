@@ -1,55 +1,76 @@
 <html>
-<title>zeb0x01</title>
-<head>
+  <title>zeb0x01</title>
+  <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYXFXGPEM2"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-FYXFXGPEM2"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-FYXFXGPEM2');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-FYXFXGPEM2");
     </script>
-</head>
-<style>
+  </head>
+  <style>
     p {
-        font-family: "Courier New", Courier, monospace;
-        font-size: 18px;
-        color: white;
-        padding: 10px;
-        margin: 10px;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 18px;
+      color: white;
+      padding: 10px;
+      margin: 10px;
     }
-    
+
     a {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
     }
-    
+
     body {
-        background-color: black;
+      background-color: black;
     }
-</style>
+  </style>
 
+  <body>
+    <p>
+      <strong>>>> Security Report: </strong> Private Feed Through a Public Read Access Token
+    </p>
 
-<p>
-Security Report: Private Feed Through a Public Read Access Token
-
-Reported: January 28, 2022 10:18pm +0530
-Bounty Awarded: February 11th, 2022
-
-Description:
-During our security testing of the application hubs.mozilla.com as part of Mozilla's bug bounty program, we identified a vulnerability related to the access control mechanism in GitHub's API. Specifically, we were able to access private feed data through a public read access token. With this token, we were able to fetch the API endpoint (https://api.github.com/feeds) and receive feeds of both private user and organization data.
-
-To reproduce this issue, we followed these steps:
-
-Created a public access token with no specific permissions.
-Sent a curl request with the token to the GitHub API endpoint: curl https://api.github.com/feeds -H "Authorization: token ghp_{your_token}".
-Received a JSON response containing 2-3 URLs, depending on the number of organizations the user belongs to.
-The URLs provided access to private data, including internal pull requests, which was not intended.
-This bypass of OAuth permissions represents a significant security risk for GitHub users and their organizations, as private data could be accessed without proper authorization. The feeds data exposed internal pull request data of the organizations the user belonged to.
-
-We immediately reported this vulnerability to GitHub's security team and worked with them to remediate the issue. We were awarded a bounty for our responsible disclosure of this vulnerability.
-
-As always, we remain committed to identifying and reporting vulnerabilities in software and web applications to help keep our clients' data safe and secure.
+    <p>
+      <strong>>>> Reported: </strong> January 28, 2022 10:18pm +0530 
+      <p>
+      <strong>>>> Description:</strong> During our security testing of the application
+      hubs.mozilla.com as part of Mozilla's bug bounty program, we identified a
+      vulnerability related to the access control mechanism in GitHub's API.
+      Specifically, we were able to access private feed data through a public
+      read access token. With this token, we were able to fetch the API endpoint
+      (https://api.github.com/feeds) and receive feeds of both private user and
+      organization data. To reproduce this issue, we followed these steps: 1.
+      Created a public access token with no specific permissions. 2. Sent a curl
+      request with the token to the GitHub API endpoint: curl
+      https://api.github.com/feeds -H "Authorization: token ghp_{your_token}".
+      3. Received a JSON response containing 2-3 URLs, depending on the number
+      of organizations the user belongs to. 4. The URLs provided access to
+      private data, including internal pull requests, which was not intended.
+      This bypass of OAuth permissions represents a significant security risk
+      for GitHub users and their organizations, as private data could be
+      accessed without proper authorization. The feeds data exposed internal
+      pull request data of the organizations the user belonged to. We
+      immediately reported this vulnerability to GitHub's security team and
+      worked with them to remediate the issue. We were awarded a bounty for our
+      responsible disclosure of this vulnerability.
+    </p>
+    </p>
 </p>
+    <p>
+      As always, we remain committed to identifying and reporting
+      vulnerabilities in software and web applications to help keep our clients'
+      data safe and secure.
+    </p>
+  </body>
+</html>
